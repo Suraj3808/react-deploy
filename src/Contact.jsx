@@ -51,9 +51,9 @@ const Contact = () => {
                                     placeholder="Enter Your Full Name"
                                 />
                             </div>
-                         
-                           
-                           
+
+
+
                             <div className="form-group mb-5">
                                 <label for="exampleFormControlInput1">Email Address</label>
                                 <input type="email"
@@ -100,5 +100,3 @@ const Contact = () => {
     );
 };
 export default Contact;
-
-

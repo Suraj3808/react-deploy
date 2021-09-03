@@ -10,7 +10,7 @@ html{
 }
 body{
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     background: rgb(171, 224, 240);
     display: flex;
     flex-direction: column;
@@ -27,22 +27,20 @@ p{
     font-family: Georgia, 'Times New Roman', Times, serif;
     position: fixed;
 }
-.navbar-brand{
-    font-size: 5rem !important;
-    color:#0c84d3 !important;  
+nav .navbar-brand{
+    font-size: 5rem;
+    color:#0c84d3;
 }
 .navbar-brand:hover{
  transition: 3s;
- transform: scaleX(1.1);
 }
 nav{
      background: rgb(224, 241, 245);
+     width: 100%;
 }
 .navbar {
-   margin-top: 0;
-   padding: 0;
     color: white;
-    font-size: 2.0rem;
+    font-size: 2rem;
     text-transform: capitalize;
    text-shadow: 0px 6px 10px rgb(26, 25, 25);
    font-family: 'Times New Roman', Times, serif;
@@ -66,14 +64,14 @@ nav{
 
 #header h1{
     margin: 0 0 10px 0;
-    font-size: 4rem;
+    font-size: 70px;
     font-weight: 700;
     color: black;
 }
 
 #header .brand-name{
     color: #2699e6;
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 #header h2{
@@ -90,7 +88,7 @@ nav{
     border-radius: 50px;
     transition: 0.5s;
     background-color:#19e0d6 ;
-   color: white;   
+   color: white;
     border: 2px solid #3498db;
     text-decoration: none;
 }
@@ -129,31 +127,39 @@ form input{
 form > button{
     margin-bottom: 75px;
 }
+
+/* images */
+
+
+
 /*Footer part*/
 footer {
-    margin-top: 1rem;
+    margin-top: auto;
     width: 100vw;
     height: 5vh;
     background-color: #E0f1f5;
 }
 footer p{
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     place-items: center;
     color:black;
     text-align: center;
     align-items: center;
     text-transform: capitalize;
-    font-size: 1.5rem;
-    line-height: 3rem;
+    font-size: 15px;
+    line-height: 15px;
+    padding-top: 15px;
 }
 /*Image animation*/
 #header .animated{
-    
+
     animation: right-left 3s ease-in-out infinite alternate-reverse both;
 }
 @-webkit-keyframes right-left{
     0%{
-        transform: translateX(70px);
+        transform: translateX(90px);
     }
       100%{
         transform: translateX(-20px);
@@ -168,7 +174,10 @@ footer p{
         transform: translateX(-20px);
     }
 }
+
+
 /* @media queries to make responsive*/
+
 /*Logo*/
 @media (max-width: 1280px) {
     nav #logo{
@@ -176,68 +185,128 @@ footer p{
     }
 }
 
-@media (min-width:768px)  {
-    nav #logo{
-        width: 15vw;
-        height: 10vh;
-    }
-}
-@media (min-width:991px)  {
-    nav #logo{
-        width: 25vw;
-        height: 15vh;
-    }
-}
-/* Header and images */
+@media(max-width: 280px){
+    nav .navbar{
+        min-height: 2rem;
+        width: 100%;
 
-@media (
-   max-width : 991px 
-){
-#header{
+    }
+ nav #logo img{
+        width: 15vw;
+        height: 5vh;
+    }
+}
+
+/* for tablet screen */
+@media only screen and (max-width: 992px) {
+    nav ul li .nav-link{
+        font-size: 20px;
+    }
+
+     #header{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 80vh;
+          text-align: center;
+         margin-bottom: 10px;
+    }
+    #header h1{
+       font-size: 30px;
+    }
+    #header .brand-name{
+        font-size: 40px;
+    }
+    #header .header-img img{
+
+        margin-top: 40px;
+        margin-bottom:10px;
+        width: 43vw;
+        height: 19vh;
+    }
+   img{
+    margin-top: 8px;
+     width: 25vw;
+     height: 15vh;
+    }
+
+   nav .navbar-brand{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+        font-size: 70px;
+    }
+
+  .menu_active{
+    font-weight: bold;
+    border-bottom: none;
+   }
+
+   nav #logo img{
+        width: 18vw;
+        height: 16vh;
+    }
+    footer{
+        margin-top: 35px;
+        height: 3rem;
+        font-size: 10px;
+    }
+
+    .card .card-title{
+        font-size: 13px;
+        font-weight: 900;
+
+    }
+    .card .card-text{
+        font-size: 12px;
+    }
+     .btn-primary{
+        margin-bottom: 10px;
+    }
+}
+
+
+
+/* Header and images for mobile screen */
+@media (max-width : 768px){
+    nav ul li .nav-link{
+        font-size: 20px;
+    }
+     #header{
     height: 80vh;
     text-align: ceter;
     margin-bottom: 10px;
-}
-img{
-    margin-top: 10px;
-     width: 25vw; 
-     height: 15vh;
-  }
- 
-}
-@media (max-width : 768px){
-#header {
-    height: 30vh;
-}
-  img{
-     width: 35vw; 
-     height: 25vh;
-     margin-top: 55px;
-  }
-}
-
-/*Navbar*/
-
-@media(max-width: 768px){
-    #header {
-    height: 80vh;
-    display: flex;
-    margin-top: 20px;
-}
-    .navbar-brand{
-        font-size: 3.5rem !important;
     }
-   
+    #header h1{
+       font-size: 40px;
+    }
+    #header h1 .brand-name{
+        font-size: 60px;
+    }
+  #header .header-image img{
+    margin-top: 8px;
+     width: 35vw;
+     height: 15vh;
+    }
 
-.menu_active{
+   nav .navbar-brand{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+        font-size: 35px;
+    }
+
+  .menu_active{
     font-weight: bold;
     border-bottom: none;
-}
+   }
 
-}
-@media(max-width: 768px){
- nav #logo img{
+   nav #logo img{
         width: 25vw;
         height: 15vh;
+    }
+    footer{
+        height: 4rem;
+        font-size: 10px;
     }
 }

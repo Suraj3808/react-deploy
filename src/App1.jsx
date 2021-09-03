@@ -26,7 +26,7 @@ const App1 = () => {
                 <Route  exact path="/service" component={Service} />
                 <Route exact path="/about" component={About} />
                 <Redirect to="/" />
-            
+
             </Switch>
             <Footer />
 
@@ -35,5 +35,3 @@ const App1 = () => {
     );
 };
 export default App1;
-
-

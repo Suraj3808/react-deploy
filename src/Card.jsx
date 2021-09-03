@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import web from "../src/Images/pic1.svg.webp";
+// import web from "../src/Images/pic1.svg.webp";
 
 
 
@@ -11,7 +11,7 @@ const Card = (props) => {
 
     return (
         <>
-           
+
      <div className="col-md-4 col-10 mx-auto">
       <div className="card">
          <img src={props.imgsrc} className="card-img-top mt-0" alt={props.imgsrc} />
@@ -20,17 +20,15 @@ const Card = (props) => {
                  <p className="card-text">
                      Some quick example text to build on the card title and make up the bulk of the card's content.
                 </p>
-                    <NavLink to="" className="btn btn-primary">
+                    <NavLink to="/" className="btn text-xl btn-primary">
                              Go somewhere
                      </NavLink>
              </div>
      </div>
     </div>
-                        
+
 
         </>
     );
 };
 export default Card;
-
-

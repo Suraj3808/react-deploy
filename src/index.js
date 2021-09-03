@@ -15,6 +15,6 @@ ReactDOM.render(
     );
 
 
-  
+
 /* Redirect method  use to replace the error page
  */
